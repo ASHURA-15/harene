@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Harene 🤍</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =========================
+     BACKGROUND
+========================= -->
+
+<div id="stars"></div>
+
+<div class="moon"></div>
+
+<div class="floating-hearts"></div>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section id="intro" class="screen active">
+
+    <div class="intro-content">
+
+        <p class="small-text">A little something for</p>
+
+        <h1>Harene</h1>
+
+        <div class="heart-line">♡</div>
+
+        <p class="intro-message">
+            Hey Sayang...
+            <br>
+            I know things haven't been the easiest lately.
+        </p>
+
+        <p class="sub-message">
+            So I made you a little place<br>
+            where you can forget everything for a while.
+        </p>
+
+        <button class="glow-button" onclick="enterWebsite()">
+            ✨ Enter
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main id="mainContent" class="hidden">
+
+
+<!-- =========================
+     SECTION 1
+========================= -->
+
+<section class="section welcome-section">
+
+    <div class="content">
+
+        <p class="small-text">For you, Maa</p>
+
+        <h2>
+            You deserve
+            <span>good days.</span>
+        </h2>
+
+        <p class="paragraph">
+            Maybe today wasn't your day.
+            Maybe things feel a little heavier than usual.
+        </p>
+
+        <p class="paragraph">
+            But you don't have to figure everything out tonight.
+        </p>
+
+        <div class="breathing-circle">
+            <span>take a breath</span>
+        </div>
+
+        <p class="soft-text">
+            Inhale... slowly.<br>
+            Exhale... slowly.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 2
+     PICK ONE
+========================= -->
+
+<section class="section choices-section">
+
+    <div class="content">
+
+        <p class="small-text">Okay Thangoo...</p>
+
+        <h2>Tell me what you need.</h2>
+
+        <p class="paragraph">
+            Don't overthink it. Just pick one.
+        </p>
+
+        <div class="choice-container">
+
+            <button class="choice-card" onclick="showChoice('smile')">
+                <span>🌸</span>
+                <strong>I need a smile</strong>
+                <small>make me smile</small>
+            </button>
+
+            <button class="choice-card" onclick="showChoice('comfort')">
+                <span>🌙</span>
+                <strong>I need comfort</strong>
+                <small>stay with me</small>
+            </button>
+
+            <button class="choice-card" onclick="showChoice('sweet')">
+                <span>💌</span>
+                <strong>I need something sweet</strong>
+                <small>surprise me</small>
+            </button>
+
+        </div>
+
+        <div id="choiceMessage" class="choice-message"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 3
+     HEART GAME
+========================= -->
+
+<section class="section game-section">
+
+    <div class="content">
+
+        <p class="small-text">A tiny game for you</p>
+
+        <h2>Catch the hearts 🤍</h2>
+
+        <p class="paragraph">
+            Catch <strong>5 hearts</strong> to unlock something.
+        </p>
+
+        <div class="game-area" id="gameArea">
+
+            <div class="game-counter">
+                Hearts:
+                <span id="heartCount">0</span>
+                / 5
+            </div>
+
+            <div id="gameStart">
+
+                <button
+                    class="glow-button"
+                    id="startGameButton"
+                    onclick="startGame()">
+                    Start ✨
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="gameReward" class="hidden reward">
+
+            <div class="reward-heart">♡</div>
+
+            <h3>You did it.</h3>
+
+            <p>
+                See, Sayang?
+                <br>
+                One little thing at a time. 🤍
+            </p>
+
+            <button
+                class="glow-button"
+                onclick="goToSection('things')">
+                Continue →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 4
+     THINGS I DON'T SAY
+========================= -->
+
+<section id="things" class="section things-section">
+
+    <div class="content">
+
+        <p class="small-text">Things I don't say enough</p>
+
+        <h2>Maybe you should know...</h2>
+
+        <div class="message-cards">
+
+            <div class="message-card">
+                <span>01</span>
+                <p>
+                    I genuinely like talking to you.
+                </p>
+            </div>
+
+            <div class="message-card">
+                <span>02</span>
+                <p>
+                    Your smile has become one of my favourite things.
+                </p>
+            </div>
+
+            <div class="message-card">
+                <span>03</span>
+                <p>
+                    I notice more about you than I probably should.
+                </p>
+            </div>
+
+            <div class="message-card">
+                <span>04</span>
+                <p>
+                    I care about how you're doing, even when I don't always know what to say.
+                </p>
+            </div>
+
+            <div class="message-card special">
+                <span>05</span>
+                <p>
+                    And honestly...
+                    <br><br>
+                    you mean more to me than you probably realise.
+                </p>
+            </div>
+
+        </div>
+
+        <button class="text-button" onclick="goToSection('memories')">
+            There's more... →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 5
+     PHOTOS
+========================= -->
+
+<section id="memories" class="section memories-section">
+
+    <div class="content">
+
+        <p class="small-text">Little moments</p>
+
+        <h2>Things worth remembering.</h2>
+
+        <p class="paragraph">
+            Some moments are beautiful simply because they're yours.
+        </p>
+
+        <div class="photo-grid">
+
+            <div class="photo-card rotate-left">
+                <img src="images/harene1.jpg" alt="Harene">
+                <div class="photo-caption">
+                    That cute little face.
+                </div>
+            </div>
+
+            <div class="photo-card rotate-right">
+                <img src="images/harene2.jpg" alt="Harene">
+                <div class="photo-caption">
+                    My favourite version of you.
+                </div>
+            </div>
+
+            <div class="photo-card rotate-left">
+                <img src="images/harene3.jpg" alt="Harene">
+                <div class="photo-caption">
+                    You probably don't know how pretty this moment is.
+                </div>
+            </div>
+
+            <div class="photo-card rotate-right">
+                <img src="images/harene4.jpg" alt="Harene">
+                <div class="photo-caption">
+                    Yeah... I saved this one for a reason.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SECTION 6
+     ONE DAY
+========================= -->
+
+<section class="section future-section">
+
+    <div class="content">
+
+        <p class="small-text">One day...</p>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <span>01</span>
+                <p>
+                    Maybe we'll look back at these days
+                    and laugh.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <span>02</span>
+                <p>
+                    Maybe we'll realise how much
+                    we actually meant to each other.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <span>03</span>
+                <p>
+                    Maybe we'll finally say the things
+                    we were both too scared to say.
+                </p>
+            </div>
+
+            <div class="timeline-item final-line">
+                <span>04</span>
+                <p>
+                    But for now...
+                    <br>
+                    I'm just happy you're here.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section class="section letter-section">
+
+    <div class="content">
+
+        <p class="small-text">For Harene</p>
+
+        <h2>Something I wanted you to know.</h2>
+
+        <div class="envelope-container">
+
+            <div class="envelope" id="envelope">
+
+                <div class="envelope-back"></div>
+
+                <div class="letter-paper">
+
+                    <h3>Hey Sayang 🤍</h3>
+
+                    <p>
+                        I don't really know how you're feeling right now,
+                        and I don't want to pretend that I can fix everything.
+                    </p>
+
+                    <p>
+                        But I wanted to make you something.
+                    </p>
+
+                    <p>
+                        Just a small place where you can come,
+                        forget everything for a few minutes,
+                        smile a little,
+                        and remember that someone genuinely cares about you.
+                    </p>
+
+                    <p>
+                        You don't have to reply to this.
+                        You don't have to say anything.
+                    </p>
+
+                    <p>
+                        Just know that your presence means something to me.
+                    </p>
+
+                    <p>
+                        And even if I don't always say it,
+                        I really do hope life becomes a little kinder to you.
+                    </p>
+
+                    <p>
+                        So whenever you're having one of those days...
+                        come back here.
+                    </p>
+
+                    <p class="highlight">
+                        I'll be somewhere in these little words,
+                        quietly reminding you:
+                    </p>
+
+                    <p class="final-message">
+                        You're important.<br>
+                        You're appreciated.<br>
+                        And you're never as alone as you think.
+                    </p>
+
+                    <p>
+                        Now go smile.
+                    </p>
+
+                    <p>
+                        Because yes...
+                        <br>
+                        I made an entire website just to make you smile. 😭🤍
+                    </p>
+
+                    <div class="signature">
+                        — someone who cares about you
+                    </div>
+
+                </div>
+
+                <div class="envelope-front"></div>
+
+                <div class="envelope-flap"></div>
+
+            </div>
+
+            <button class="glow-button envelope-button" onclick="openLetter()">
+                Open when you're ready 💌
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="section final-section">
+
+    <div class="content">
+
+        <div id="finalReveal">
+
+            <p class="small-text">
+                There was one thing...
+            </p>
+
+            <h2>
+                I couldn't put<br>
+                into the website.
+            </h2>
+
+            <button class="reveal-button" onclick="revealFinal()">
+                Open →
+            </button>
+
+        </div>
+
+        <div id="finalMessage" class="hidden">
+
+            <div class="final-heart">♡</div>
+
+            <h2>
+                Maybe I'll tell you someday.
+            </h2>
+
+            <p class="paragraph">
+                Until then...
+            </p>
+
+            <h3>
+                Stay happy, Sayang.
+            </h3>
+
+            <p class="nickname">
+                Maa · Thangoo · Harene 🤍
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        Made with a little bit of time,
+        a lot of thought,
+        and maybe a tiny bit of madness. 🤍
+    </p>
+
+    <span>For Harene.</span>
+
+</footer>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
